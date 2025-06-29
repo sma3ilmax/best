@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialBoost Pro - Grow Your Social Media & Get Premium Subscriptions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        premium: '#8B5CF6'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* WhatsApp Click Indicator */
+        body {
+            cursor: pointer;
+        }
+        body:hover::after {
+            content: "Click anywhere to chat on WhatsApp";
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            z-index: 9999;
+            animation: fadeIn 0.3s;
+        }
+        
+        .payment-methods {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            color: #666;
+        }
+        .payment-methods i {
+            margin-right: 0.3rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #3B82F6 0%, #1F2937 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .stat-counter {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #3B82F6, #10B981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .pricing-card:hover {
+            border-color: #3B82F6;
+        }
+        .premium-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .premium-card::before {
+            content: "POPULAR";
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            transform: rotate(45deg);
+            background-color: #8B5CF6;
+            color: white;
+            padding: 2px 30px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fab fa-buffer text-blue-500 text-2xl"></i>
+                <span class="text-xl font-bold">Social<span class="text-blue-500">Boost</span>.Pro</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="#services" class="hover:text-blue-400 transition">Services</a>
+                <a href="#premium" class="hover:text-blue-400 transition">Premium Subscriptions</a>
+                <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
+                <a href="#testimonials" class="hover:text-blue-400 transition">Reviews</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="hidden md:block bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium transition">
+                    <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                    Grow Your Social Media <br> 
+                    <span class="text-blue-300">Followers & Engagement</span> Instantly
+                </h1>
+                <p class="text-xl mb-8 text-blue-100 max-w-lg">
+                    Get real followers, likes, comments and views on Facebook, Instagram, YouTube, TikTok, and more. Plus premium subscriptions at unbeatable prices.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-md font-bold shadow-lg transition flex items-center justify-center">
+                        <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                        <div class="payment-methods">
+                            <i class="fas fa-university"></i>CIH <i class="fas fa-university"></i>Barid <i class="fab fa-paypal"></i>PayPal
+                        </div>
+                    </button>
+                    <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="bg-blue-700 hover:bg-blue-800 px-6 py-3 rounded-md font-bold shadow-lg transition flex items-center justify-center">
+                        <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                        <div class="payment-methods text-blue-100">
+                            <i class="fas fa-university"></i>CIH <i class="fas fa-university"></i>Barid <i class="fab fa-paypal"></i>PayPal
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-blue-500 opacity-50"></div>
+                    <div class="absolute -bottom-10 -left-10 w-32 h-32 rounded-full bg-green-500 opacity-50"></div>
+                    
+                    <div class="relative bg-white rounded-2xl shadow-xl p-6 max-w-sm">
+                        <div class="flex space-x-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        
+                        <div class="flex items-center mb-6">
+                            <div class="mr-4">
+                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"></div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">SocialBoost Dashboard</h3>
+                                <p class="text-sm text-gray-500">Premium Growth Services</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-600">Instagram Followers</span>
+                                <span class="font-bold">+1,232</span>
+                            </div>
+                            <div class="h-2 bg-blue-200 rounded-full">
+                                <div class="h-2 bg-blue-500 rounded-full w-4/5"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-600">YouTube Views</span>
+                                <span class="font-bold">+24,891</span>
+                            </div>
+                            <div class="h-2 bg-green-200 rounded-full">
+                                <div class="h-2 bg-green-500 rounded-full w-2/3"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-blue-100 rounded-lg p-3 text-center">
+                                <i class="fab fa-facebook text-blue-600 text-xl mb-2"></i>
+                                <span class="text-sm font-bold">+567</span>
+                            </div>
+                            <div class="bg-pink-100 rounded-lg p-3 text-center">
+                                <i class="fab fa-instagram text-pink-600 text-xl mb-2"></i>
+                                <span class="text-sm font-bold">+1.2K</span>
+                            </div>
+                            <div class="bg-red-100 rounded-lg p-3 text-center">
+                                <i class="fab fa-youtube text-red-600 text-xl mb-2"></i>
+                                <span class="text-sm font-bold">+24K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Social Media Growth Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide real growth for your social media accounts with instant delivery and premium quality services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Facebook Service -->
+                <div class="service-card bg-gray-50 border border-gray-100 rounded-xl p-6 transition duration-300">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
+                            <i class="fab fa-facebook text-blue-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Facebook Growth</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Real Likes
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Followers
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Comments
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Shares
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Post Views
+                        </li>
+                    </ul>
+                    <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md font-medium transition">
+                        <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                        <div class="payment-methods text-blue-100">
+                            <i class="fas fa-university"></i>CIH <i class="fas fa-university"></i>Barid <i class="fab fa-paypal"></i>PayPal
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- Instagram Service -->
+                <div class="service-card bg-gray-50 border border-gray-100 rounded-xl p-6 transition duration-300">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-pink-100 flex items-center justify-center">
+                            <i class="fab fa-instagram text-pink-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Instagram Growth</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Followers
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Likes
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Comments
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Story Views
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Reel Views
+                        </li>
+                    </ul>
+                    <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-md font-medium transition">
+                        <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                    </button>
+                </div>
+                
+                <!-- YouTube Service -->
+                <div class="service-card bg-gray-50 border border-gray-100 rounded-xl p-6 transition duration-300">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center">
+                            <i class="fab fa-youtube text-red-600 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">YouTube Growth</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Subscribers
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Views
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Likes
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Comments
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Watch Hours
+                        </li>
+                    </ul>
+                    <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-md font-medium transition">
+                        <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                        <div class="payment-methods text-red-100">
+                            <i class="fas fa-university"></i>CIH <i class="fas fa-university"></i>Barid <i class="fab fa-paypal"></i>PayPal
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- TikTok Service -->
+                <div class="service-card bg-gray-50 border border-gray-100 rounded-xl p-6 transition duration-300">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center">
+                            <i class="fab fa-tiktok text-indigo-800 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">TikTok Growth</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Followers
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Likes
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Video Views
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Shares
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Comments
+                        </li>
+                    </ul>
+                    <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md font-medium transition">
+                        <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="stat-counter font-bold mb-2" data-count="50000">50,000+</div>
+                    <div class="text-gray-400">Happy Clients</div>
+                </div>
+                <div>
+                    <div class="stat-counter font-bold mb-2" data-count="12000000">12M+</div>
+                    <div class="text-gray-400">Followers Delivered</div>
+                </div>
+                <div>
+                    <div class="stat-counter font-bold mb-2" data-count="25000000">25M+</div>
+                    <div class="text-gray-400">Likes Generated</div>
+                </div>
+                <div>
+                    <div class="stat-counter font-bold mb-2" data-count="99">99%</div>
+                    <div class="text-gray-400">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Subscriptions -->
+    <section id="premium" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Premium Subscriptions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Authentic accounts for premium services at unbeatable prices with instant delivery.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Netflix -->
+                <div class="bg-red-50 border border-red-100 rounded-xl p-6 text-center">
+                    <div class="flex justify-center mb-6">
+                        <i class="fab fa-netflix text-red-600 text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Netflix Premium</h3>
+                    <p class="text-gray-600 mb-4">Premium accounts with 4K UHD, multiple screens</p>
+                    <ul class="space-y-2 mb-6 text-left">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> One month warranty
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Private accounts
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Worldwide access
+                        </li>
+                    </ul>
+                    <div class="font-bold text-2xl mb-4">$5.99<span class="text-sm font-normal text-gray-600">/month</span></div>
+                    <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-md font-medium transition">
+                        <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                    </button>
+                </div>
+                
+                <!-- Shahid VIP -->
+                <div class="premium-card bg-purple-50 border border-purple-100 rounded-xl p-6 text-center">
+                    <div class="flex justify-center mb-6">
+                        <i class="fab fa-netflix text-purple-600 text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Shahid VIP</h3>
+                    <p class="text-gray-600 mb-4">Premium Arabic content with exclusive shows</p>
+                    <ul class="space-y-2 mb-6 text-left">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> One month warranty
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> HD streaming
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Multi-device
+                        </li>
+                    </ul>
+                    <div class="font-bold text-2xl mb-4">$4.99<span class="text-sm font-normal text-gray-600">/month</span></div>
+                    <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-md font-medium transition">
+                        <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                    </button>
+                </div>
+                
+                <!-- IPTV -->
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 text-center">
+                    <div class="flex justify-center mb-6">
+                        <i class="fas fa-tv text-blue-600 text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Premium IPTV</h3>
+                    <p class="text-gray-600 mb-4">Thousands of channels with premium sports</p>
+                    <ul class="space-y-2 mb-6 text-left">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> 20,000+ channels
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Premium sports
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Full HD & 4K
+                        </li>
+                    </ul>
+                    <div class="font-bold text-2xl mb-4">$14.99<span class="text-sm font-normal text-gray-600">/month</span></div>
+                    <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md font-medium transition">
+                        <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-500 to-indigo-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Grow Your Social Media?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of satisfied clients who have transformed their social media presence with our premium services.</p>
+            <button onclick="window.open('https://wa.me/212644167689', '_blank')" class="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-md font-bold text-xl shadow-xl transition">
+                <i class="fab fa-whatsapp mr-2"></i>Chat on WhatsApp Now
+                <div class="payment-methods mt-2">
+                    <i class="fas fa-university"></i>CIH <i class="fas fa-university"></i>Barid <i class="fab fa-paypal"></i>PayPal
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fab fa-buffer text-blue-500 text-2xl"></i>
+                        <span class="text-xl font-bold">Social<span class="text-blue-500">Boost</span>.Pro</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Premium social media growth services and authentic premium subscriptions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Instagram Growth</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">YouTube Growth</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">TikTok Growth</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Facebook Growth</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Twitter Growth</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Premium Subscriptions</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Netflix Premium</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Shahid VIP</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Premium IPTV</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Spotify Premium</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Disney+</a></li>
+                    </ul>
+                </div>
+                
+                <div id="contact">
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-500"></i>
+                            sma3il.max12@gmail.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-comments mr-2 text-blue-500"></i>
+                            24/7 Live Chat Support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500 text-sm">
+                © 2023 SocialBoost Pro. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // WhatsApp redirect on any click
+        document.addEventListener('click', function(e) {
+            // Don't redirect if clicking on links/buttons/inputs
+            if (e.target.tagName === 'A' || 
+                e.target.tagName === 'BUTTON' || 
+                e.target.tagName === 'INPUT' ||
+                e.target.closest('a') || 
+                e.target.closest('button') || 
+                e.target.closest('input')) {
+                return;
+            }
+            
+            window.open('https://wa.me/212644167689', '_blank');
+        });
+
+        // Simple counter animation for stats
+        const counters = document.querySelectorAll('.stat-counter');
+        const speed = 200;
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const count = parseInt(counter.innerText.replace(',', ''));
+                const increment = Math.floor(target / speed);
+                
+                if(count < target) {
+                    counter.innerText = (count + increment).toLocaleString();
+                    setTimeout(updateCount, 10);
+                } else {
+                    counter.innerText = target.toLocaleString();
+                }
+            };
+            
+            updateCount();
+        });
+
+        // Service card animation
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('shadow-lg');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('shadow-lg');
+            });
+        });
+    </script>
+
